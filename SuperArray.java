@@ -18,6 +18,10 @@ public class SuperArray {
 			return true;
 		}
 		return false;
-		
+	}
+
+
+	public String get(int index) {
+		return data[index];
 	}
 }
