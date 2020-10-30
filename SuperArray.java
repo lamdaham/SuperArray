@@ -10,4 +10,14 @@ public class SuperArray {
 	public int size() {
 		return size;
 	}
+
+	public boolean add(String element) {
+		if (size<data.length) {
+			data[size] = element;
+			size++;
+			return true;
+		}
+		return false;
+		
+	}
 }
