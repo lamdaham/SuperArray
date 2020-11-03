@@ -45,4 +45,20 @@ public class SuperArray {
 		}
 		data = newArray;
 	}
+
+
+
+
+	public String toString() {
+		String output = "[";
+		for(int i = 0; i<data.length; i++) {
+			if(i==data.length-1) {
+				output += data[i];
+				break;
+			} 
+			output += (data[i]+", ");
+		}
+		output += "]";
+		return output;
+	}
 }
