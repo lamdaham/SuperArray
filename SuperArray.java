@@ -46,7 +46,12 @@ public class SuperArray {
 		data = newArray;
 	}
 
-
+	public boolean isEmpty() {
+		if (size == 0) {
+			return true;
+		}
+		return false;
+	}
 
 
 	public String toString() {
