@@ -92,4 +92,13 @@ public class SuperArray {
 		data[index-1] = element;
 	}
 
+	public String remove(int index) {
+		String output = data[index];
+		for (int i = index; i<size; i++) {
+			data[i] = data[i+1];
+		}
+		size--;
+		return output;
+	}
+
 }
