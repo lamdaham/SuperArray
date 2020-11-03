@@ -59,6 +59,16 @@ public class SuperArray {
 	}
 
 
+	public boolean contains(String s) {
+		for (String element:data) {
+			if (s.equals(element)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+
 	public String toString() {
 		String output = "[";
 		for(int i = 0; i<data.length; i++) {
