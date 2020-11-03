@@ -72,7 +72,7 @@ public class SuperArray {
 	public String toString() {
 		String output = "[";
 		for(int i = 0; i<size; i++) {
-			if(i==data.length-1) {
+			if(i==size-1) {
 				output += data[i];
 				break;
 			} 
@@ -109,6 +109,14 @@ public class SuperArray {
 			}
 		}
 		return -1;
+	}
+
+	public String[] toArray() {
+		String[] output = new String[size];
+		for (int i = 0; i<size; i++) {
+			output[i] = data[i];
+		}
+		return output;
 	}
 
 }
