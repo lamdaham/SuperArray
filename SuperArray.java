@@ -2,6 +2,14 @@ public class SuperArray {
 	private String[] data;
 	private int size;
 
+
+
+	public SuperArray() {
+		data = new String[10];
+		size = 0;
+	}
+
+
 	public SuperArray(int initialCapacity) {
 		data = new String[initialCapacity];
 		size = 0;
@@ -60,8 +68,8 @@ public class SuperArray {
 
 
 	public boolean contains(String s) {
-		for (String element:data) {
-			if (s.equals(element)) {
+		for (int i = 0; i<size; i++) {
+			if (data[i].equals(s)) {
 				return true;
 			}
 		}
@@ -89,7 +97,8 @@ public class SuperArray {
 		for (int i = size; i>index-1; i--) {
 			data[i] = data[i-1];
 		}
-		data[index-1] = element;
+		size++;
+		data[index] = element;
 	}
 
 	public String remove(int index) {
