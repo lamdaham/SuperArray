@@ -91,10 +91,8 @@ public class SuperArray {
 	}
 
 	public void add(int index, String element) {
-		if (data.length<size+2) {
-			resize();
-		}
-		for (int i = size; i>index-1; i--) {
+		resize();
+		for (int i = size; i>index-1 && i>=1; i--) {
 			data[i] = data[i-1];
 		}
 		size++;
@@ -103,7 +101,7 @@ public class SuperArray {
 
 	public String remove(int index) {
 		String output = data[index];
-		for (int i = index; i<size; i++) {
+		for (int i = index; i<size-2; i++) {
 			data[i] = data[i+1];
 		}
 		size--;
