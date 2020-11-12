@@ -24,17 +24,29 @@ public class Demo{
 	public static SuperArray zip(SuperArray a, SuperArray b) {
 		SuperArray output = new SuperArray();
 		int max = 0;
-		if (a.size()>=b.size()) {
-			max = a.size();
+		int largest =0;
+		if (a.size()<=b.size()) {
+			for (int i = 0; i<a.size(); i++) {
+				output.add(a.get(i));
+				output.add(b.get(i));
+			}
+			for (int i = a.size(); i<b.size(); i++) {
+				output.add(b.get(i));
+			}
 		} else {
-			max = b.size();
+			for (int i = 0; i<b.size(); i++) {
+				output.add(a.get(i));
+				output.add(b.get(i));
+			}
+			for (int i = b.size(); i<a.size(); i++) {
+				output.add(a.get(i));
+			}
 		}
-		for (int i = 0; i<max; i++) {
-			output.add(a.get(i));
-			output.add(b.get(i));
-		}
+		
+		
 		return output;
 	}
+
 	public static void main(String[] args) {
 		//SuperArray list = new SuperArray(-1000);
 	}
